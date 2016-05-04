@@ -22,11 +22,11 @@ def previo(clave):
     if clave== '':
 	return 'No se ha recibido previo a buscar'
 
-    cur.execute('SELECT nombre, correo FROM profesor where nombre like "%'+ command + '%"')
-    for row in cur.fetchall(): 
-        correo += str(row[1])
+  #  cur.execute('SELECT nombre, correo FROM profesor where nombre like "%'+ command + '%"')
+   # for row in cur.fetchall():
+   #     correo += str(row[1])
     
-    return str("El correo del Ing " + str(row[0].encode('utf-8')) + " es : " + str(row[1])))
+  #  return str("El correo del Ing " + str(row[0].encode('utf-8')) + " es : " + str(row[1])))
        
 
 

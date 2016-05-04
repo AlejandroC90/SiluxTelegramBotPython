@@ -9,13 +9,29 @@ import datetime
 import profesor
 import informacion
 import canal
+import eliza
+import fechas
+from eliza import eliza
+
+therapist = eliza();
 
 #Clase controladora del Bot
 def asesoriaProfesor(nombre):
 	return profesor.asesoriaPro(nombre)
 
-def enviarmensajecanal():
+def correoProfesor(nombre):
+	return profesor.correoPro(nombre)
+    
+def paginaProfesor(nombre):
+	return profesor.paginaPro(nombre)
+
+def enviarMensajeCanal():
 	return canal.info()
+
+def enviarFechas(nombre):
+        return fechas.fecha(nombre)
   
-   	
+def elizam(mensaje):
+	return therapist.respond(mensaje)
+	  	
 
