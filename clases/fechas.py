@@ -13,7 +13,7 @@ import MySQLdb #para la conexión a la base de datos de datos mysql, recuerde te
 
 db = MySQLdb.connect(host="sandbox2.ufps.edu.co", # tu host, generalmente localhost
                      user="ufps_79", # nombre de usuario para la conexion a la base de datos
-                      passwd="", # contraseña para conectar a la base de datos
+                      passwd="ufps_po", # contraseña para conectar a la base de datos
                       db="ufps_79", charset="utf8") # nombre de la base de datos, se define codificacion utf-8
 db.names="uft8" #Se vuelve a definir codificación utf-8 para los nombres
 

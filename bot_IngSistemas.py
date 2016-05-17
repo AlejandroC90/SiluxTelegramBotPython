@@ -9,8 +9,8 @@ import clases.controlador as controlador
 import threading
 
 def canal():
-        threading.Timer(3600, canal).start()
-        print "Enviando mensaje a canal"
+      #   threading.Timer(3600, canal).start()
+      print "Enviando mensaje a canal"
       #  self.sender.sendMessage("@IngSistemasUFPSCanal" + controlador.enviarmensajecanal())
       #  bot.sendMessage('@IngSistemasUFPSCanal', controlador.enviarMensajeCanal())
 
@@ -31,8 +31,8 @@ class botSistemas(telepot.helper.ChatHandler):
         nombre = (msg['from']['first_name']).encode('utf-8')
         
         if self._mensaje == "/start":
-            self.sender.sendMessage ("Hola! \nBienvenido al Bot de Ingeniería de Sistemas de la UFPS creado por el Semillero de Desarrollo de Software Libre y Linux. \n\nTengo disponibles los siguientes comandos: \n\n/correo Muestro correo de un profesor \n/asesoria Muestro los días de asesorias de un profesor \n/fecha Muestro la fecha de un evento (ej: primeros previos) \n/paginaWeb Muestro la página web de un profesor \n")
-            
+            self.sender.sendMessage ("Hola! \nBienvenido al Bot de Ingeniería de Sistemas de la UFPS creado por el Semillero de Desarrollo de Software Libre y Linux. \n\nTengo disponibles los siguientes comandos: \n\n/profesor Muestro información de un profesor: Correo, Horario de Asesoría y Página Web \n/calendario Muestro la fecha de un evento del calendario académico (ej: primeros previos) \n/informacion Información del programa de Ingeniería de Sistemas \n/sugerencias Tienes algo que opinar o pedir? aquí lo puedes hacer \ny más por venir... ")
+
         #LISTO LO REFERENTE A PROFESOR
         elif self._mensaje == "/profesor":
             show_keyboard = {'keyboard': [['Correo'],['Horario de Asesoría'],['Página Web']],'one_time_keyboard':True}
@@ -40,7 +40,7 @@ class botSistemas(telepot.helper.ChatHandler):
             self._variable = 1
         
              
-        elif self._mensaje == "/fechas":
+        elif self._mensaje == "/calendario":
             show_keyboard = {'keyboard': [['Primeros Previos'],['Segundos Previos'],['Exámenes Finales'],['Habilitaciones']],'one_time_keyboard':True}
             self.sender.sendMessage(nombre + ", ¿De qué evento desea saber su fecha?",reply_markup=show_keyboard)
             self._variable = 2
