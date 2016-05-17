@@ -10,7 +10,7 @@ import threading
 
 def canal():
       #   threading.Timer(3600, canal).start()
-      print "Enviando mensaje a canal"
+      print "Enviando mensaje a canal del programa"
       #  self.sender.sendMessage("@IngSistemasUFPSCanal" + controlador.enviarmensajecanal())
       #  bot.sendMessage('@IngSistemasUFPSCanal', controlador.enviarMensajeCanal())
 
